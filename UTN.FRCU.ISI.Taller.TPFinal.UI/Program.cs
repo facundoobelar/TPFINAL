@@ -21,6 +21,7 @@ namespace UTN.FRCU.ISI.Taller.TPFinal.UI
             //estudioso
             //otra cosa sds
             //despues de que facu modifico otra clase
+            //estudiososss 1726
         }
     }
 }
