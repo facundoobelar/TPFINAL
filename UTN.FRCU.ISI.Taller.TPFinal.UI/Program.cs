@@ -17,11 +17,9 @@ namespace UTN.FRCU.ISI.Taller.TPFinal.UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMain());
-            //hf asf
-            //estudioso
-            //otra cosa sds
-            //despues de que facu modifico otra clase
-            //estudiososss 1726
+            
+            //FUINCIONANDO
+
         }
     }
 }
