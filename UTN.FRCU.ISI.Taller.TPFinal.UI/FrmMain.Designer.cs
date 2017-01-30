@@ -30,32 +30,23 @@
         {
             System.Windows.Forms.StatusStrip statusStrip;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgRssItems = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblUrl = new System.Windows.Forms.Label();
             this.cmbUrl = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.dgRssItems = new System.Windows.Forms.DataGridView();
             this.RssTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RssDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RssPublishingDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.bwRssReader = new System.ComponentModel.BackgroundWorker();
             statusStrip = new System.Windows.Forms.StatusStrip();
-            this.panel1.SuspendLayout();
             statusStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgRssItems)).BeginInit();
+            this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRssItems)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(524, 43);
-            this.panel1.TabIndex = 0;
             // 
             // statusStrip
             // 
@@ -66,25 +57,19 @@
             statusStrip.Size = new System.Drawing.Size(524, 22);
             statusStrip.TabIndex = 1;
             // 
-            // dgRssItems
+            // lblStatus
             // 
-            this.dgRssItems.AllowUserToAddRows = false;
-            this.dgRssItems.AllowUserToDeleteRows = false;
-            this.dgRssItems.AllowUserToOrderColumns = true;
-            this.dgRssItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgRssItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RssTitle,
-            this.RssDescription,
-            this.RssPublishingDate});
-            this.dgRssItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgRssItems.Location = new System.Drawing.Point(0, 43);
-            this.dgRssItems.MultiSelect = false;
-            this.dgRssItems.Name = "dgRssItems";
-            this.dgRssItems.ReadOnly = true;
-            this.dgRssItems.RowHeadersVisible = false;
-            this.dgRssItems.ShowEditingIcon = false;
-            this.dgRssItems.Size = new System.Drawing.Size(524, 196);
-            this.dgRssItems.TabIndex = 2;
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 17);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(524, 43);
+            this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -100,7 +85,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(524, 43);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -136,6 +121,26 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // dgRssItems
+            // 
+            this.dgRssItems.AllowUserToAddRows = false;
+            this.dgRssItems.AllowUserToDeleteRows = false;
+            this.dgRssItems.AllowUserToOrderColumns = true;
+            this.dgRssItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgRssItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RssTitle,
+            this.RssDescription,
+            this.RssPublishingDate});
+            this.dgRssItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgRssItems.Location = new System.Drawing.Point(0, 43);
+            this.dgRssItems.MultiSelect = false;
+            this.dgRssItems.Name = "dgRssItems";
+            this.dgRssItems.ReadOnly = true;
+            this.dgRssItems.RowHeadersVisible = false;
+            this.dgRssItems.ShowEditingIcon = false;
+            this.dgRssItems.Size = new System.Drawing.Size(524, 196);
+            this.dgRssItems.TabIndex = 2;
+            // 
             // RssTitle
             // 
             this.RssTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -159,11 +164,6 @@
             this.RssPublishingDate.Name = "RssPublishingDate";
             this.RssPublishingDate.ReadOnly = true;
             // 
-            // lblStatus
-            // 
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(0, 17);
-            // 
             // bwRssReader
             // 
             this.bwRssReader.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwRssReader_DoWork);
@@ -182,12 +182,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RSS Example";
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            this.panel1.ResumeLayout(false);
             statusStrip.ResumeLayout(false);
             statusStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgRssItems)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRssItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

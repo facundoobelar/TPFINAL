@@ -45,7 +45,7 @@ namespace UTN.FRCU.ISI.Taller.TPFinal.Model
                     PublishingDate = bItem.PublishDate.DateTime
                 });
             }
-
+            ///sss
             cLogger.Info("Devolviendo feeds adaptados...");
             return mRssItems;
         }
