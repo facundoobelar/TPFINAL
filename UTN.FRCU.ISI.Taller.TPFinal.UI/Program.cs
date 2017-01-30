@@ -18,7 +18,7 @@ namespace UTN.FRCU.ISI.Taller.TPFinal.UI
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMain());
             
-            //FUINCIONANDO
+            //FUINCIONANDO ahora
 
         }
     }
